@@ -142,7 +142,7 @@ model.to(torch.bfloat16)
 model.to(device)
 ```
 
-You can run the scripts in [/evaluate]() directory to conduct inference. For example, 
+You can run the scripts in [/evaluate](https://github.com/nusnlp/FSPO/tree/master/evaluate) directory to conduct inference. For example, 
 
 ```bash
 eval_truthfulqa.sh
