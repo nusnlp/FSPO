@@ -13,38 +13,6 @@ def make_prefix(dp, template_type):
     question = dp['question']
     candidate_answers = [dp['right_answer'], dp['hallucinated_answer']]
     random.shuffle(candidate_answers)
-    # if random.random() < 0.5:
-    #     answer = dp['right_answer']
-    #     ground_truth = "No"
-    # else:
-    #     answer = dp['hallucinated_answer']
-    #     ground_truth = "Yes"
-    # if template_type == 'base':
-    #     prefix = f"""A conversation between User and Assistant. The user asks a question, and the assistant solves it.
-    #     The assistant first thinks about the reasoning process in the mind and then provides the user with the final
-    #     answer. The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags,
-    #     respectively. For example, <think> reasoning process here </think> <answer> answer here </answer>. Now the user
-    #     asks a question and provides a candidate answer. If the candidate answer is incorrect and hallucinated, the assistant
-    #     should respond "Yes", while if the candidate answer is correct and factual, the assistant should respond "No". The
-    #     Assistant shows the reasoning process within <think> </think> tags, and ONLY returns "Yes"
-    #     or "No" within <answer> </answer> tags, such as <answer> Yes </answer>.\n\nUser: #Question#: {question} #Candidate Answer#: {answer}\nAssistant: Let me solve this step by step. <think>"""
-    # elif template_type == 'qwen-instruct':
-    #     prefix = f"""<|im_start|>system\nYou are a helpful assistant. Given a question, you need to first think about
-    #     the reasoning process in the mind and then provide the final answer. The reasoning process and answer are enclosed
-    #     within <think> </think> and <answer> </answer> tags, respectively. For example, <think> reasoning process
-    #     here </think> <answer> answer here </answer>. Now the user asks a question and provides an answer. If the candidate
-    #     answer is incorrect and hallucinated, you should respond "Yes", while if the candidate answer is correct and factual,
-    #     you should respond "No". You must show the reasoning process within <think> </think> tags, and ONLY return "Yes"
-    #     or "No" within <answer> </answer> tags, such as <answer> Yes </answer>.<|im_end|>\n<|im_start|>user\n#Question#: {question}\n#Candidate Answer#: {answer}\n<|im_end|>\n<|im_start|>assistant\nLet me solve this step by step.\n<think>"""
-    # elif template_type == 'llama-instruct':
-    #     prefix = f"""<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nYou are a helpful assistant.
-    #     Given a question, you need to first think about the reasoning process in the mind and then provide the final
-    #     answer. The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags,
-    #     respectively. For example, <think> reasoning process here </think> <answer> answer here </answer>. Now the user
-    #     asks a question and provides an answer. If the candidate answer is incorrect and hallucinated, you should
-    #     respond "Yes", while if the candidate answer is correct and factual, you should respond "No". You must show the
-    #     reasoning process within <think> </think> tags, and ONLY return "Yes" or "No" within <answer> </answer> tags, such as <answer> Yes </answer>.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n#Question#: {question}\n#Candidate Answer#: {answer}\n<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\nLet me solve this step by step.\n<think>"""
-    # return prefix, ground_truth
     if template_type == 'base':
         prefix = f"""A conversation between User and Assistant. The user asks a question, and the assistant solves it.
         The assistant first thinks about the reasoning process in the mind and then provides the user with the final
