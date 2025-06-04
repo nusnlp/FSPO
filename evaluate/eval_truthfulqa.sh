@@ -1,0 +1,1 @@
+python3 evaluate.py --data_path ../data/TruthfulQA/TruthfulQA.jsonl --output_path ./truthfulqa/qwen_base.json --model_type base --gpu_id 0 --local_path ../llm/Qwen2.5-7B-Base --model_path verl/checkpoints/GRPO-Mixture/SF-GRPO/global_step_2000/actor
