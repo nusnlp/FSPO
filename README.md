@@ -1,5 +1,5 @@
 <div align='center'>
-<h1>The Hallucination Dilemma: Factuality-Aware Reinforcement Learning for Large Reasoning Models</h1>
+<h1>Reasoning Models Hallucinate More: Factuality-Aware Reinforcement Learning for Large Reasoning Models</h1>
 
 <!-- TODO:  Thread,Paper,Dataset,Weights-->
 [![Paper](https://img.shields.io/badge/paper-5f16a8?style=for-the-badge&logo=arxiv&logoColor=white)](https://www.arxiv.org/pdf/2505.24630)
@@ -9,8 +9,9 @@
 
 > [!IMPORTANT]
 > **🔥 News!!!**
+> - [2025/09/19] Our paper was accepted as NeurIPS 2025 Poster paper.
 > - [2025/06/02] We release our code, data for reproducing our work.
-> - [2025/05/30] We release our paper "The Hallucination Dilemma: Factuality-Aware Reinforcement Learning for Large Reasoning Models" on arXiv.
+> - [2025/05/30] We release our paper "Reasoning Models Hallucinate More: Factuality-Aware Reinforcement Learning for Large Reasoning Models" on arXiv.
 
 We propose **F**actuality-aware **S**tep-wise **P**olicy **O**ptimization (**FSPO**), an innovative RL fine-tuning algorithm incorporating explicit factuality verification at each reasoning step. FSPO leverages automated verification against given evidence to dynamically adjust token-level advantage values, incentivizing factual correctness throughout the reasoning process. Our algorithm is based on the awesome [verl](https://github.com/volcengine/verl) framework. Thanks for their great work!
 
@@ -157,7 +158,7 @@ If you use the data or code in this repo, please cite the following paper:
 ```
 @inproceedings{FSPO,
   author = {Junyi Li and Hwee Tou Ng},
-  title = {The Hallucination Dilemma: Factuality-Aware Reinforcement Learning for Large Reasoning Models},
+  title = {Reasoning Models Hallucinate More: Factuality-Aware Reinforcement Learning for Large Reasoning Models},
   year = {2025},
   eprint={2505.24630},
   archivePrefix={arXiv},
